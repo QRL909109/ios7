@@ -11,6 +11,8 @@ import filters from './filters'
 import directives from './directives'
 
 import 'weui/dist/style/weui.min.css'
+import 'lib-flexible/flexible.js'
+
 
 import App from './App'
 
