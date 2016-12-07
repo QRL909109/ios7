@@ -1,4 +1,4 @@
-# ios7
+﻿# ios7
 
 > 使用vue2.0、vue-router、vuex模拟ios7
 ## Build Setup
@@ -14,5 +14,5 @@ npm run dev
 npm run build
 ```
 https://qrl909109.github.io/ios7/index.html#/main 按F12 调试 就能看到效果 
-<br/>如果你决定好  帮忙start一下
+<br/>如果你觉得好  帮忙start一下
 <br/>期待博客更新
