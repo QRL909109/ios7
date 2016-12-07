@@ -1,0 +1,322 @@
+@import 'reset.css';
+@import 'weui.min.css';
+@import 'iconfont.css';
+@import "main";
+/**/
+$red :#f00;
+$default :#796ffd;
+$gray:#9b9b9b;
+
+a,
+button,
+input,
+textarea {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  line-height: 1;
+  line-height: 1.6;
+}
+
+html,
+body,
+#app {
+  font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica;
+  height: 100%;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a,a:link,a:visited,a:active,a:hover{
+  text-decoration: none;
+}
+
+.clearfix:before {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.red{
+  color: $red;
+}
+.red_bg{
+  background-color: $red;
+}
+
+.default{
+  color: $default;
+}
+.default_bg{
+  background-color: $default;
+  color: #fff;
+}
+
+.gray{
+  color: $gray;
+}
+.gray_bg{
+  background-color: $gray;
+}
+
+._full {
+  width: 100%;
+  height: 100%;
+}
+
+._scroll {
+  overflow: auto;
+}
+
+._ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+._ellipsis-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+._left {
+  float: left;
+}
+
+._right {
+  float: right;
+}
+
+._align-middle {
+  vertical-align: middle;
+}
+
+._align-left {
+  text-align: left;
+}
+
+._align-right {
+  text-align: right;
+}
+
+._align-center {
+  text-align: center;
+}
+
+.margin-top-0 {
+  margin-top: 0;
+}
+
+.border-top-0 {
+  border-top: 0;
+}
+
+.padding-top-1 {
+  padding-top: 1px;
+}
+
+/*1px线*/
+
+._line-fine:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  left: 0;
+  top: 0;
+  transform: scale(.5);
+  transform-origin: 0 0;
+  -webkit-transform: scale(.5);
+  -webkit-transform-origin: 0 0;
+  background-color: #b7b7b7;
+  height: 1px;
+  z-index: 2;
+}
+
+._full_inner {
+  z-index: 2;
+  position: relative;
+  height: 100%;
+}
+
+._full_router {
+  position: absolute;
+  z-index: 10;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 子路由被激活后应用的样式 */
+
+._effect {
+  opacity: 1;
+  transition: .3s all ease;
+}
+
+._effect--30 {
+  transform: translate3d(-30%, 0, 0);
+}
+
+._effect--50 {
+  opacity: 0;
+  transform: translate3d(-50%, 0, 0);
+}
+._news-count {
+  position: absolute;
+  font-style: initial;
+  font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica;
+  right: 35px;
+  top: -5px;
+  z-index: 2;
+  padding: 0 4px;
+  width: auto;
+  min-width: 0.53rem;
+  height: 0.53rem;
+  line-height: 0.53rem;
+  border-radius:50%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 25px;
+  background-color: #f43531;
+}
+.app-header{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  background: #f9f9f9;
+  font-size: 40px;
+  color: #000;
+  text-align: center;
+  border-bottom: 1px solid #d0d0d0;
+}
+/*中部*/
+.app-content{
+  padding-top: 1.25rem;
+  padding-bottom: 1.7rem;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+.app-footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+}
+
+
+//页面过度
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+
+.bounce-leave-active {
+  animation: bounce-out .5s;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity:0;
+  }
+}
+
+@keyframes bounce-out {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.top_point {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background: url("../images/ios7/top_point.png") no-repeat;
+  background-size: 100%;
+  width: 1.28rem;
+  height: 1.28rem;
+}
+
+.top_point_model {
+  position: absolute;
+  z-index: 3;
+  top: 25%;
+  left: 5%;
+  width: 90%;
+  height: 10rem;
+  background-color: rgb(53,53,53);
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.point_model_item {
+  align-self: center;
+  height: 33.3333%;
+  .item {
+    color: #fff;
+    .iconfont{
+      font-size: 120px;
+    }
+  }
+}
+.point_model_item_two{
+  display: flex;
+  justify-content: space-around;
+  height: 33.3333%;
+  .item {
+    width: 50%;
+    display: inline-block;
+    color: #fff;
+
+    text-align: center;
+    .iconfont {
+      font-size: 120px;
+    }
+  }
+}
+.topModel-enter-active, .topModel-leave-active {
+  transition: all .26s ease;
+}
+.topModel-enter, .topModel-leave-active {
+  transform: scale(0);
+}
