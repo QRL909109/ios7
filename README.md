@@ -15,7 +15,7 @@ npm run build
 ```
 https://qrl909109.github.io/ios7/index.html#/main 按F12 调试 就能看到效果 
 <br/>
-<br/>![](http://a33d82f76271fa5e5ac8.b0.upaiyun.com/apicloud/edcb50a3d20a7656eefcdcca5d078655.gif)
+<br/>![ABC](https://github.com/QRL909109/ios7/blob/master/src/assets/ios7.gif)
 <br/>
 <br/>如果你觉得不错  帮忙start一下
 <br/>期待博客更新...
