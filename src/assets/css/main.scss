@@ -1,0 +1,209 @@
+.main_screen{
+    width: 100%;
+    height: 100%;
+    background: url(../images/ios7/bg.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    display: -webkit-box;
+    flex-direction: column;
+    -webkit-box-orient:vertical;
+    justify-content: space-between;
+    -webkit-box-pack:justify;
+}
+
+.swipe_b,.time_model{
+    margin: 2rem auto;
+    align-self: center;
+    color: #fff;
+}
+.swipe_unlock{
+    width:100%;
+    font-size:0.8rem;
+    text-align:center;
+    -webkit-background-clip: text;    /*按文字裁剪*/
+    -webkit-text-fill-color: transparent;    /*文字的颜色使用背景色*/
+    background-color:#19385c;    /*设置一个背景色*/
+    background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #aff0ff 50%, rgba(0, 0, 0, 0.6) 70%);        /*设置渐变的背景，按对角线渐变*/
+    background-blend-mode: hard-light;    /*设置背景为混合模式下的强光模式*/
+    background-size: 200%;
+    -webkit-animation: shine 4s infinite;    /*给背景添加动画改变位置*/
+    animation: shine 4s infinite;
+    user-select: none;
+    .icon-youjiantou{
+        font-size: 0.5rem;
+    }
+}
+@keyframes shine {
+    from{
+        background-position: 100%;
+    }
+    to{
+        background-position: 0;
+    }
+}
+@-webkit-keyframes shine {
+    from{
+        background-position: 100%;
+    }
+    to{
+        background-position: 0;
+    }
+}
+.time_model_time{
+    text-align: center;
+    font-size: 2rem;
+}
+.time_model_date{
+    @extend .time_model_time;
+    font-size: 0.55rem;
+}
+.unlock-enter-active,.unlock-leave-active{
+    transition: 0.2s all linear;
+    -webkit-transition: 0.2s all linear;
+}
+.unlock-enter,.unlock-leave-active{
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+    -webkit-transform: translate3d(100%,0,0);
+}
+
+/*底部按钮*/
+.main-footer{
+    display: flex;
+    display: -webkit-box;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: rgba(112,200,208,.8);
+    dl{
+        text-align: center;
+        width: 25%;
+        display: block;
+        dt{
+            width: 1.52rem;
+            height: 1.52rem;
+            margin: 0 auto;
+            margin-top: 0.3rem;
+            background-size: 98%;
+        }
+        dd{
+            color: #fff;
+            text-align: center;
+        }
+        .icon-delete1{
+            display: none;
+        }
+    }
+}
+
+/*屏幕图标*/
+.main-section{
+    @extend .main-footer;
+    top:0.8rem;
+    background-color: transparent;
+    flex-wrap: wrap;
+    -webkit-box-lines: multiple;
+    dl{
+        display: inline-block;
+    }
+}
+
+
+.scon-tel{
+    background: url('../images/ios7/scon-tel.png') no-repeat;
+}
+.scon-set{
+    background: url('../images/ios7/scon-set.png') no-repeat;
+}
+.scon-mess{
+    background: url('../images/ios7/scon-mess.png') no-repeat;
+}
+.scon-elem{
+    background: url('../images/ios7/scon-elem.png') no-repeat;
+    background-size: 98%;
+}
+.scon-com{
+    background: url('../images/ios7/scon-com.png') no-repeat;
+}
+.scon-address{
+    background: url('../images/ios7/scon-address.png') no-repeat;
+}
+.scon-pic{
+    background: url('../images/ios7/scon-pic.png') no-repeat;
+}
+.scon-cem{
+    background: url('../images/ios7/scon-cem.png') no-repeat;
+}
+
+
+.m_footer-enter-active, .m_footer-leave-active,.m_content-enter-active, .m_content-leave-active{
+    transition:0.3s all linear;
+    -webkit-transition:0.3s all linear;
+}
+.m_footer-enter, .m_footer-leave-active{
+    opacity: 0;
+    padding-bottom: 50px;
+}
+.m_content-enter, .m_content-leave-active{
+    opacity: 0;
+    padding-left: 50px;
+}
+//图标抖动
+.shake{
+    position: relative;
+    animation: shake-buzz 0.3s;
+    -webkit-animation: shake-buzz 0.3s;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    .icon-delete1{
+        display: block !important;
+        font-size: 0.45rem;
+        position: absolute;
+        top:0;
+        left:0.08rem;
+        color: #ddd;
+    }
+}
+@keyframes shake-buzz {
+    0% {
+        transform: translateX(2px) rotate(2deg);
+    }
+    20% {
+        transform: translateX(0) rotate(0deg);
+    }
+    40% {
+        transform: translateY(-2px) rotate(-2deg);
+    }
+    60% {
+        transform: translateX(2px) rotate(2deg);
+    }
+    80% {
+        transform: translateY(-2px) rotate(-2deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+@-webkit-keyframes shake-buzz {
+    0% {
+        -webkit-transform: translateX(2px) rotate(2deg);
+    }
+    20% {
+        -webkit-transform: translateX(0) rotate(0deg);
+    }
+    40% {
+        -webkit-transform: translateY(-2px) rotate(-2deg);
+    }
+    60% {
+        -webkit-transform: translateX(2px) rotate(2deg);
+    }
+    80% {
+        -webkit-transform: translateY(-2px) rotate(-2deg);
+    }
+    100% {
+        -webkit-transform: translateX(0) rotate(0deg);
+    }
+}
+
