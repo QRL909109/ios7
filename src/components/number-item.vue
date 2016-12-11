@@ -26,7 +26,7 @@
     border: 1px solid #10aeff;
     border-radius: 50%;
     text-align: center;
-    display: inline-block;
+    margin: 0 0.65rem;
   }
   .number-item-main{
     font-size: 0.63rem;

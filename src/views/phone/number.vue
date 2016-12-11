@@ -99,7 +99,7 @@ import numberItem from 'components/number-item'
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .component-number{
     width: 100%;
     height: calc(100% - 1.7rem);
@@ -108,34 +108,36 @@ import numberItem from 'components/number-item'
   .input_number{
     width: 80%;
     margin: 0 auto;
-  }
-  .input_number .input_text{
-    border: 1px;
-    -webkit-appearance: none;
-    background-color: transparent;
-    padding: 0.4rem;
-    width: 90%;
-    height: 1.3rem;
-    display: inline-block;
-    text-align: center;
-    font-size: 0.55rem;
-  }
-  .input_number .iconfont{
-    width: 10%;
-    height: 1.3rem;
-    font-size: 0.4rem;
-    display: inline-block;
-    float: right;
-    padding: 0.4rem;
-    vertical-align: middle;
-  }
-  .touch_number{
 
+    .input_text{
+      border: 1px;
+      -webkit-appearance: none;
+      background-color: transparent;
+      padding: 0.4rem;
+      width: 90%;
+      height: 1.3rem;
+      display: inline-block;
+      text-align: center;
+      font-size: 0.55rem;
+    }
+
+    .iconfont{
+      width: 10%;
+      height: 1.3rem;
+      font-size: 0.4rem;
+      display: inline-block;
+      float: right;
+      padding: 0.4rem;
+      vertical-align: middle;
+    }
   }
+
   .touch_number_item{
     display: flex;
+    display: -webkit-box;
     justify-content: space-around;
-    margin: 0.8rem;
+    -webkit-box-pack: center;
+    margin: 0.5rem;
     overflow: hidden;
   }
 </style>

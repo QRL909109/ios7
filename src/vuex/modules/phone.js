@@ -28,7 +28,7 @@ let store = {
     personal_list: [],                //个人收藏
     commit_list: [],                    //通讯录
     recent_list: [],                     //最近通话列表
-    recent_no_list: [],                     //最近通话列表
+    recent_no_list: []                     //最近通话列表
 
 };
 
@@ -40,8 +40,7 @@ const mutations = {
         state.personal_list = personal;
     },
     [DEL_PERSONAL_ITEM](state,id,type){
-        var index = state[type].findIndex(value => value.id == id);
-
+        var index = state[type].slice().findIndex(value => value.id == id);
         state[type].splice(index, 1);
     },
     [GET_COMMIT_LIST](state, commit){

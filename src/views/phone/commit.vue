@@ -38,7 +38,7 @@
                 phoneModel: {
                     curText: '所有联系人',
                     nextIcon: 'icon-jia1',
-                    decline:false
+                    decline: false
                 }
             }
         },
@@ -47,7 +47,7 @@
             searchBar,
             commitBox
         },
-        events:{
+        events: {
             'route-pipe'(_decline){
                 this.decline = _decline;
                 console.log('我被cu发了')
@@ -57,15 +57,12 @@
 </script>
 
 <style scoped>
-.commit-searchBar{
-    position: fixed;
-    width: 100%;
-    z-index: 3;
-    height: 1rem;
-}
+   .commit-searchBar {
+        position: relative;
+        width: 100%;
+        z-index: 3;
+    }
     .commit-main{
-        margin-top: 0.89rem;
-        height: 100%;
-        overflow: scroll;
+        height:90%
     }
 </style>

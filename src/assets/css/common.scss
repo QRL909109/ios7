@@ -20,7 +20,6 @@ input:focus {
 
 body {
   -webkit-overflow-scrolling: touch;
-  line-height: 1;
   line-height: 1.6;
 }
 
@@ -174,21 +173,24 @@ a,a:link,a:visited,a:active,a:hover{
 ._effect {
   opacity: 1;
   transition: .3s all ease;
+  -webkit-transition: .3s all ease;
 }
 
 ._effect--30 {
   transform: translate3d(-30%, 0, 0);
+  -webkit-transform: translate3d(-30%, 0, 0);
 }
 
 ._effect--50 {
   opacity: 0;
   transform: translate3d(-50%, 0, 0);
+  -webkit-transform: translate3d(-50%, 0, 0);
 }
 ._news-count {
   position: absolute;
   font-style: initial;
   font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica;
-  right: 35px;
+  right: 0.5rem;
   top: -5px;
   z-index: 2;
   padding: 0 4px;
@@ -199,7 +201,7 @@ a,a:link,a:visited,a:active,a:hover{
   border-radius:50%;
   color: #ffffff;
   text-align: center;
-  font-size: 25px;
+  font-size: 0.3rem;
   background-color: #f43531;
 }
 .app-header{
@@ -231,92 +233,4 @@ a,a:link,a:visited,a:active,a:hover{
   width: 100%;
   position: absolute;
   z-index: 3;
-}
-
-
-//页面过度
-.bounce-enter-active {
-  animation: bounce-in .5s;
-}
-
-.bounce-leave-active {
-  animation: bounce-out .5s;
-}
-
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity:0;
-  }
-}
-
-@keyframes bounce-out {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-
-.top_point {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 100;
-  background: url("../images/ios7/top_point.png") no-repeat;
-  background-size: 100%;
-  width: 1.28rem;
-  height: 1.28rem;
-}
-
-.top_point_model {
-  position: absolute;
-  z-index: 3;
-  top: 25%;
-  left: 5%;
-  width: 90%;
-  height: 10rem;
-  background-color: rgb(53,53,53);
-  border-radius: 0.2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.point_model_item {
-  align-self: center;
-  height: 33.3333%;
-  .item {
-    color: #fff;
-    .iconfont{
-      font-size: 120px;
-    }
-  }
-}
-.point_model_item_two{
-  display: flex;
-  justify-content: space-around;
-  height: 33.3333%;
-  .item {
-    width: 50%;
-    display: inline-block;
-    color: #fff;
-
-    text-align: center;
-    .iconfont {
-      font-size: 120px;
-    }
-  }
-}
-.topModel-enter-active, .topModel-leave-active {
-  transition: all .26s ease;
-}
-.topModel-enter, .topModel-leave-active {
-  transform: scale(0);
 }

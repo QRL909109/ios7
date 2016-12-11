@@ -3,7 +3,7 @@
     <dl v-for="item in menu" :class="{shake : shake_active}" v-touch:press="shake" @click="linkHref(item.go)">
         <dt :class="item.type"></dt>
         <dd v-text="item.name"></dd>
-      <i class="iconfont icon-delete1" @click.stop="deleteIcon(item)"></i>
+      <i class="iconfont icon-delete1" @click="deleteIcon(item)" @touchstart="deleteIcon(item)"></i>
     </dl>
   </nav>
 </template>

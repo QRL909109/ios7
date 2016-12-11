@@ -4,8 +4,11 @@
     background: url(../images/ios7/bg.jpg) no-repeat center center;
     background-size: cover;
     display: flex;
+    display: -webkit-box;
     flex-direction: column;
+    -webkit-box-orient:vertical;
     justify-content: space-between;
+    -webkit-box-pack:justify;
 }
 
 .swipe_b,.time_model{
@@ -15,8 +18,7 @@
 }
 .swipe_unlock{
     width:100%;
-    line-height:50px;
-    font-size:50px;
+    font-size:0.8rem;
     text-align:center;
     -webkit-background-clip: text;    /*按文字裁剪*/
     -webkit-text-fill-color: transparent;    /*文字的颜色使用背景色*/
@@ -25,12 +27,21 @@
     background-blend-mode: hard-light;    /*设置背景为混合模式下的强光模式*/
     background-size: 200%;
     -webkit-animation: shine 4s infinite;    /*给背景添加动画改变位置*/
+    animation: shine 4s infinite;
     user-select: none;
     .icon-youjiantou{
-        font-size: 30px;
+        font-size: 0.5rem;
     }
 }
 @keyframes shine {
+    from{
+        background-position: 100%;
+    }
+    to{
+        background-position: 0;
+    }
+}
+@-webkit-keyframes shine {
     from{
         background-position: 100%;
     }
@@ -48,29 +59,33 @@
 }
 .unlock-enter-active,.unlock-leave-active{
     transition: 0.2s all linear;
+    -webkit-transition: 0.2s all linear;
 }
 .unlock-enter,.unlock-leave-active{
     opacity: 0;
     transform: translate3d(100%,0,0);
+    -webkit-transform: translate3d(100%,0,0);
 }
 
 /*底部按钮*/
 .main-footer{
     display: flex;
-    flex-direction: row;
+    display: -webkit-box;
+
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 2.5rem;
     background-color: rgba(112,200,208,.8);
     dl{
-        align-self: center;
         text-align: center;
         width: 25%;
+        display: block;
         dt{
             width: 1.52rem;
             height: 1.52rem;
             margin: 0 auto;
+            margin-top: 0.3rem;
             background-size: 98%;
         }
         dd{
@@ -89,8 +104,9 @@
     top:0.8rem;
     background-color: transparent;
     flex-wrap: wrap;
+    -webkit-box-lines: multiple;
     dl{
-        margin-bottom: 0.6rem;
+        display: inline-block;
     }
 }
 
@@ -124,6 +140,7 @@
 
 .m_footer-enter-active, .m_footer-leave-active,.m_content-enter-active, .m_content-leave-active{
     transition:0.3s all linear;
+    -webkit-transition:0.3s all linear;
 }
 .m_footer-enter, .m_footer-leave-active{
     opacity: 0;
@@ -137,13 +154,15 @@
 .shake{
     position: relative;
     animation: shake-buzz 0.3s;
+    -webkit-animation: shake-buzz 0.3s;
     animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
     .icon-delete1{
         display: block !important;
         font-size: 0.45rem;
         position: absolute;
-        top:-23px;
-        left:12px;
+        top:0;
+        left:0.08rem;
         color: #ddd;
     }
 }
@@ -165,6 +184,26 @@
     }
     100% {
         transform: translateX(0) rotate(0deg);
+    }
+}
+@-webkit-keyframes shake-buzz {
+    0% {
+        -webkit-transform: translateX(2px) rotate(2deg);
+    }
+    20% {
+        -webkit-transform: translateX(0) rotate(0deg);
+    }
+    40% {
+        -webkit-transform: translateY(-2px) rotate(-2deg);
+    }
+    60% {
+        -webkit-transform: translateX(2px) rotate(2deg);
+    }
+    80% {
+        -webkit-transform: translateY(-2px) rotate(-2deg);
+    }
+    100% {
+        -webkit-transform: translateX(0) rotate(0deg);
     }
 }
 

@@ -1,8 +1,9 @@
 <template>
     <div class="_full_inner" id="phone">
         <div class="component_phone">
-            <router-view></router-view>
-
+            <keep-alive>
+                <router-view></router-view>
+            </keep-alive>
             <footer class="app-footer _line-fine">
                 <div class="_effect" :class="{'_effect--50':decline}">
                     <phone-nav></phone-nav>

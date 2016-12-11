@@ -9,12 +9,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "better-scroll": "^0.1.8",
     "fastclick": "^1.0.6",
     "lib-flexible": "^0.3.2",
     "moment": "^2.16.0",
-    "node-sass": "^3.13.0",
-    "sass-loader": "^4.0.2",
-    "style-loader": "^0.13.1",
     "vue": "^2.0.1",
     "vue-animated-list": "^1.0.2",
     "vue-hot-reload-api": "^2.0.6",

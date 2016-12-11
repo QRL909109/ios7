@@ -12,7 +12,7 @@
         <!--right-->
         <div class="top-other">
             <slot name="right">
-                <div class="_align-right" @click="nextPathHandle(nextPath)">
+                <div class="_align-center" @click="nextPathHandle(nextPath)">
                     <span class="iconfont" :class="nextIcon"></span>
                 </div>
             </slot>
@@ -75,5 +75,11 @@
 <style scoped>
     .iconfont{
         color: #796ffd;
+    }
+    [data-dpr="2"] .iconfont{
+        font-size: 32px;
+    }
+    [data-dpr="3"] .iconfont{
+        font-size: 48px;
     }
 </style>

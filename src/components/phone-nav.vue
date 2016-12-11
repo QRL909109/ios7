@@ -39,6 +39,7 @@
 <style scoped>
   nav{
     display: flex;
+    display: -webkit-box;
     width: 100%;
     overflow: hidden;
     padding: 0.15rem;
@@ -47,6 +48,7 @@
   }
   nav dl{
     user-select: none;
+    -webkit-user-select: none;
     text-align: center;
     line-height: 1;
     width: 25%;
