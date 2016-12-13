@@ -18,4 +18,4 @@ https://qrl909109.github.io/ios7/index.html#/main 按F12 调试 就能看到效�
 <br/>![ABC](https://github.com/QRL909109/ios7/blob/master/src/assets/ios7.gif)
 <br/>
 <br/>如果你觉得不错  帮忙start一下
-<br/>期待博客更新...
+<br/>更新博客地址：http://www.cnblogs.com/QRL909109/p/6143394.html
