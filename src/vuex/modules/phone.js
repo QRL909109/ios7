@@ -38,12 +38,10 @@ const mutations = {
     },
     [GET_PERSONAL_LIST](state, personal){
         state.personal_list = personal;
-        console.log('mutations get 数据',state.personal_list)
     },
     [DEL_PERSONAL_ITEM](state,id,type){
         var index = state[type].slice().findIndex(value => value.id == id);
         state[type].splice(index, 1);
-        console.log('mutations del 数据',state[type])
     },
     [GET_COMMIT_LIST](state, commit){
         state.commit_list = commit;

@@ -150,6 +150,8 @@
     height: 100%;
     cursor: pointer;
     z-index: 20;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 
 .fade-enter-active, .fade-leave-active {

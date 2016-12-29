@@ -16,7 +16,6 @@ export const backPath = ({phone}) => phone.backPath
 export const phone_nav = ({phone}) => phone.phone_nav
 
 export const personal_list = ({phone}) => {
-    console.log('getters 返回的数据', phone.personal_list)
     return phone.personal_list
 }
 

@@ -159,6 +159,8 @@
         cursor: pointer;
         width: auto;
         height: auto;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
     }
 }
 @keyframes shake-buzz {

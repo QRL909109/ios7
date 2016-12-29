@@ -78,9 +78,12 @@
                     //在滚动时候  给固定 fiexd 添加滚动距离
                     if(document.getElementsByClassName('bottom')[0] ){
                         document.getElementsByClassName('bottom')[0].style.transform = 'translateY(0)';
+                        document.getElementsByClassName('bottom')[0].style.webkitTransform = 'translateY(0)';
                     }
                     document.getElementsByClassName('fiexd')[0].style.transform = 'translateY('+this.scrollY+'px)';
+                    document.getElementsByClassName('fiexd')[0].style.webkitTransform = 'translateY('+this.scrollY+'px)';
                     document.getElementsByClassName('auto')[0].style.transform = 'translateY(0)';
+                    document.getElementsByClassName('auto')[0].style.webkitTransform = 'translateY(0)';
                 })
             },
             _calculateHeight(){
@@ -112,7 +115,7 @@
         }
     }
 </script>
-<style scoped>
+<style scoped lang="scss" type="text/scss">
     .commit-box {
         height: 100%;
     }
@@ -146,17 +149,17 @@
         height: 0.8rem;
         position: absolute;
         top:0;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+
+        &.fiexd{
+             position: fixed;
+         }
+        &.bottom{
+             position: absolute;
+         }
     }
-    .bar.fiexd{
-        position: fixed;
-        top: 0;
-        bottom:auto;
-    }
-    .bar.bottom{
-        position: absolute;
-        top:auto;
-        bottom: 0;
-    }
+
     .item-wrapper{
         padding-top: 0.8rem;
     }
@@ -172,5 +175,7 @@
     .commit-nav li {
         line-height: 0.35rem;
     }
-
+    .icon-dian{
+        font-size: 0.1rem;
+    }
 </style>
